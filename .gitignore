@@ -1,0 +1,22 @@
+# --- build artifacts ---
+build/
+dist/
+*.sln
+*.vcxproj*
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# --- generated shaders & assets ---
+*.spv
+*.generated.*
+
+# --- IDE / editor cruft ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- OS / tool junk ---
+*.log
+*.tmp
