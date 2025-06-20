@@ -7,6 +7,5 @@
     "imgui",
     "glm",
     "vulkan-memory-allocator"
-  ],
-  "builtin-baseline": ""
+  ]
 }
