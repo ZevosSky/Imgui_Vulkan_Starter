@@ -1,0 +1,12 @@
+{
+  "name": "vulkan-imgui-starter",
+  "version-string": "0.1.0",
+  "description": "Minimal Vulkan + Dear ImGui renderer with deferred shading",
+  "dependencies": [
+    "glfw3",
+    "imgui",
+    "glm",
+    "vulkan-memory-allocator"
+  ],
+  "builtin-baseline": ""
+}
