@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[]) {
 
-    std::cout << "Application started successfully!" << std::endl;
+
 
     // Main application logic goes here
     // ...
