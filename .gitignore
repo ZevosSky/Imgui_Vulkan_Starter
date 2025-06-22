@@ -1,6 +1,7 @@
 # --- build artifacts ---
 build/
 dist/
+out/
 *.sln
 *.vcxproj*
 CMakeFiles/
@@ -14,6 +15,10 @@ compile_commands.json
 # --- IDE / editor cruft ---
 .vscode/
 .idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 .DS_Store
 Thumbs.db
 
