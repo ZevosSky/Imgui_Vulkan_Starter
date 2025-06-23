@@ -15,6 +15,8 @@ find_package(Vulkan REQUIRED)
 add_executable(${PROJECT_NAME}
         src/main.cpp
         src/stdafx.h
+        src/DependantsTest.h
+
         # Add your source files here
 )
 
