@@ -9,8 +9,12 @@
 
 int main() {
 
-    //return RunDependantsTest();
-    return WindowCreationTest();
+    // return RunDependantsTest();
+    // return WindowCreationTest();
+
+
+    // create a vk instance
+
 
     return 0;
 }

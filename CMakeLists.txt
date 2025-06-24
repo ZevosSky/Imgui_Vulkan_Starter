@@ -16,6 +16,18 @@ add_executable(${PROJECT_NAME}
         src/main.cpp
         src/stdafx.h
         src/DependantsTest.h
+        src/interface.cpp
+        src/interface.h
+        src/Graphics.cpp
+        src/Graphics.h
+        src/Shader.cpp
+        src/Shader.h
+        src/VertexShader.cpp
+        src/VertexShader.h
+        src/FragmentShader.cpp
+        src/FragmentShader.h
+        src/ComputeShader.cpp
+        src/ComputeShader.h
 
         # Add your source files here
 )

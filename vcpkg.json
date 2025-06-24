@@ -4,6 +4,10 @@
   "description": "Minimal Vulkan + Dear ImGui renderer with deferred shading",
   "dependencies": [
     "glfw3",
+    {
+      "name": "imgui",
+      "features": ["glfw-binding", "vulkan-binding"]
+    },
     "imgui",
     "glm",
     "vulkan-memory-allocator"
