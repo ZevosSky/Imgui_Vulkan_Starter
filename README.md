@@ -28,7 +28,7 @@ Before cloning this project, you'll need to install the following on your machin
 - This is required for Vulkan development (headers, validation layers, tools)
 - Restart your computer after installation
 
-### 4. vcpkg (Package Manager)
+### 4. vcpkg (Package Manager) quick install guide
 ```bash
 # Navigate to a suitable location (NOT inside your project)
 cd C:\dev\
@@ -90,6 +90,7 @@ cd Imgui_Vulkan_Starter
    }
    ```
 
+
 ### 3. Build the Project
 1. **First build will take longer** (vcpkg downloads and compiles dependencies)
 2. Click build in your IDE or run:
@@ -104,7 +105,7 @@ This project automatically downloads and builds:
 - **GLFW3** - Window management
 - **Dear ImGui** - Immediate mode GUI
 - **GLM** - OpenGL Mathematics library
-- **Vulkan Memory Allocator** - GPU memory management
+- **Vulkan Memory Allocator** - GPU memory management 
 
 
 
