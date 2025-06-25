@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(vulkan-imgui-starter)
+project(vulkan-imgui-starter VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,6 +10,7 @@ find_package(imgui CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(VulkanMemoryAllocator CONFIG REQUIRED)
 find_package(Vulkan REQUIRED)
+
 
 # Add executable
 add_executable(${PROJECT_NAME}
@@ -28,9 +29,12 @@ add_executable(${PROJECT_NAME}
         src/FragmentShader.h
         src/ComputeShader.cpp
         src/ComputeShader.h
+        src/version.h
 
         # Add your source files here
 )
+
+
 
 # Link libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -40,3 +44,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         GPUOpen::VulkanMemoryAllocator
         Vulkan::Vulkan
 )
+

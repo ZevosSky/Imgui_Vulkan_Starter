@@ -24,6 +24,7 @@ class Graphics {
 
   private:
 
+    // === Methods ====
     void initWindow();
 
     void initVulkan();
@@ -32,8 +33,11 @@ class Graphics {
 
     void cleanup();
 
+    void createInstance();
 
+    // === Members ====
     GLFWwindow* m_window;
+    VkInstance m_instance;
 
 
 

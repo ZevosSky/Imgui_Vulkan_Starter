@@ -3,7 +3,7 @@
 //
 
 #include "Graphics.h"
-
+#include "version.h"
 
 
 
@@ -11,9 +11,7 @@
 
 
 void Graphics::initVulkan() {
-
-    /* no opt for now */
-
+    createInstance();
 }
 
 
@@ -44,5 +42,20 @@ void Graphics::cleanup() {
     glfwTerminate();
 }
 
+void Graphics::createInstance() {
+VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "Vulkan Test";
+    appInfo.applicationVersion = VK_MAKE_API_VERSION(VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, 0U);
+    appInfo.pEngineName = "Pillow Fort";
+    appInfo.engineVersion = VK_MAKE_API_VERSION(VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, 0U);
+    // no need to set the pNext field, as we are not
+
+    VkInstanceCreateInfo createInfo{};
+    createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    createInfo.pApplicationInfo = &appInfo;
 
 
+
+
+}

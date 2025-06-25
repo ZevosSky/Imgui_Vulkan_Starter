@@ -1,0 +1,22 @@
+//
+// Created by Gary Yang on 6/25/2025.
+//
+
+#ifndef CMAKELISTS_TXT_VERSION_H
+#define CMAKELISTS_TXT_VERSION_H
+
+// IMPORTANT: this should be controlled by CMake or whatever build system... TODO...
+
+/*
+#define MYAPP_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define MYAPP_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define MYAPP_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define MYAPP_VERSION_STR   "@PROJECT_VERSION@"
+*/
+#define VERSION_MAJOR 0
+#define VERSION_MINOR 1
+#define VERSION_PATCH 1
+#define VERSION_STR "0.1.1"
+
+
+#endif // CMAKELISTS_TXT_VERSION_H
