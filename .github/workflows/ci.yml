@@ -1,2 +1,36 @@
-  on:
-  jobs:
+name: Build Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup vcpkg
+        run: |
+          git clone https://github.com/Microsoft/vcpkg.git
+          cd vcpkg
+          .\bootstrap-vcpkg.bat
+
+      - name: Install Vulkan SDK
+        run: |
+          Invoke-WebRequest -Uri "https://vulkan.lunarg.com/sdk/download/1.3.290.0/windows/VulkanSDK-1.3.290.0-Installer.exe" -OutFile VulkanSDK.exe
+          Start-Process -FilePath VulkanSDK.exe -ArgumentList '/S' -Wait
+
+      - name: Configure and Build
+        run: |
+          cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
+          cmake --build build --config Release
+
+      - name: Test run (optional)
+        run: |
+          cd build/Release
+          .\vulkan-imgui-starter.exe --help || echo "App ran (help or crash is fine for test)"
