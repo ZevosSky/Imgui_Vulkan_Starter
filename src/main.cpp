@@ -5,6 +5,7 @@
 
 #include "stdafx.h"
 #include "DependantsTest.h"
+#include "Graphics.h"
 
 
 int main() {
@@ -12,8 +13,14 @@ int main() {
     // return RunDependantsTest();
     //  return WindowCreationTest();
 
+    Graphics graphics{};
 
-    // create a vk instance
+    try {
+        graphics.run();
+    } catch (const std::exception& e) {
+        std::cerr << "Exception: " << e.what() << "\n";
+        return 1;
+    }
 
 
     return 0;
