@@ -30,6 +30,10 @@ add_executable(${PROJECT_NAME}
         src/ComputeShader.cpp
         src/ComputeShader.h
         src/version.h
+        src/SystemManager.cpp
+        src/SystemManager.h
+        src/Camera.cpp
+        src/Camera.h
 
         # Add your source files here
 )
