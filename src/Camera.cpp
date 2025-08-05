@@ -71,6 +71,7 @@ void Camera::setRotation(glm::vec3 rotation) {
     this->m_rotation = rotation;
     updateViewMatrix();
 }
+
 void Camera::rotate(glm::vec3 delta) {
     this->m_rotation += delta;
     updateViewMatrix();

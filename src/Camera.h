@@ -53,6 +53,12 @@ class Camera {
     bool m_updated = true;
     bool m_flipY = false;  // y axis has to be fliped for openGL since it's NDC is
 
+    struct {
+        bool up = false;    // W
+        bool down = false;  // S
+        bool left = false;  // A
+        bool right = false; // D
+    } keys;
 
     //===| functions |=====|
     [[nodiscard]] float getNearClip() const {return frustum[near];}
@@ -75,7 +81,7 @@ class Camera {
 
     void setRotationSpeed(float newRotationSpeed);
 
-    void
+    bool moving() const;
 };
 
 #endif // VULKAN_IMGUI_STARTER_CAMERA_H
